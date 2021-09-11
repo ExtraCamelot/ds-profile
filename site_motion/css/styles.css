@@ -1,0 +1,319 @@
+html body {
+  margin: 0;
+  height: 100%;
+}
+
+
+/* Шапка: лого и меню */
+.header {
+  background: #f56767;
+  margin: 0;
+  min-height: 95px; /* чтобы блок растягивался по высоте
+                       при изменении масштаба экрана*/
+  overflow: hidden;
+}
+
+.header .wrapper {
+  padding-top: 10px;
+  height: 100%;
+}
+
+.header img {
+  margin-left: 17%;
+  float: left;
+}
+
+.header .wrapper ul {
+  float: right; /* что бы не высчитывать расстояние
+                  между лого и меню, и самое главное
+                  чтобы при изменении масштаба, меню
+                  располагалось под лого*/
+  margin-right: 16.5%;
+}
+
+
+.header .wrapper li {
+  display: inline;
+  margin-right: 27px; /*отступ справа от элемента li */
+  color: #fff;
+  font-size: 18px;
+}
+
+.header .wrapper a {
+  color: inherit;
+  text-decoration: none;
+  padding: 8px;
+  line-height: 50px; /*отступ от верхней границы блока (центрирование текста) */
+}
+
+.header .wrapper a:hover {
+  background: black;
+  border-radius: 5px;
+}
+
+
+/* Приветствие */
+.welcome {
+  background: #e35252;
+  min-height: 140px;
+  font-family: arial;
+  font-size: 50px;
+  text-align: center;
+  color: #F8F8FF;
+  overflow: hidden;
+}
+.welcome p {
+  padding-top: 60px;
+  margin: 0px;
+  letter-spacing: 10px; /* отступ между буквами внутри элемента */
+  height: 100%;
+}
+#asmart {
+  margin: 0px;
+  text-align: center;
+  font-size: 15px;
+  padding-top: 10px;
+  padding-bottom: 13px;
+  letter-spacing: 2px;
+  height: 100%;
+}
+
+/* Smart & Creative */
+.smart {
+  background: #262525;
+  min-height: 330px;
+  font-family: arial;
+  font-size: 35px;
+  letter-spacing: 5px; /* отступ между буквами внутри элемента */
+  text-align: center;
+  color: #F8F8FF;
+  overflow: hidden;
+}
+
+.smart p {
+
+  padding-top: 30px;
+  margin: 0px;
+  height: 100%;
+}
+
+#redsmall {
+  margin: 0px;
+  padding-top: 12px;
+  letter-spacing: 2px;
+  font-size: 12px;
+  font-weight: bold;
+  color: #e35252;
+}
+
+.smart .wrapper {
+  margin: 0 22% 0 22%; /* выравнивание блоков по центру */
+}
+
+.multi {
+  width: 180px;
+  padding-top: 30px;
+  float: left; /* выстраивание блоков влево друг за другом */
+  margin-right: 16%;
+}
+
+.multi p {
+  margin: 0;
+  padding-top: 0px;
+  letter-spacing: 1px;
+  font-size: 18px;
+}
+
+#redsmall1 {
+  margin: 0px;
+  padding-top: 12px;
+  letter-spacing: 0px;
+  font-size: 12px;
+  font-weight: bold;
+  color: #e35252;
+}
+
+.flat {
+  width: 180px;
+  padding-top: 30px;
+  float: left;
+  margin-right: 16%;
+
+}
+
+.flat p {
+  margin: 0;
+  padding-top: 0px;
+  letter-spacing: 1px;
+  font-size: 18px;
+}
+
+#redsmall2 {
+  margin: 0px;
+  padding-top: 12px;
+  letter-spacing: 0px;
+  font-size: 12px;
+  font-weight: bold;
+  color: #e35252;
+}
+
+.creative {
+  width: 180px;
+  padding-top: 30px;
+  float: left;
+}
+
+.creative p {
+  margin: 0;
+  padding-top: 0px;
+  letter-spacing: 1px;
+  font-size: 18px;
+}
+
+#redsmall3 {
+  margin: 0px;
+  padding-top: 12px;
+  letter-spacing: 0px;
+  font-size: 12px;
+  font-weight: bold;
+  color: #e35252;
+}
+
+.talented {
+  background: #77c775;
+  margin: 0;
+  font-family: arial;
+  text-align: center;
+  color: #F8F8FF;
+  overflow: hidden;
+}
+
+.talented .wrapper {
+  height: 500px;
+  margin: 0 15% 0 15%;
+}
+
+#whitebig {
+  color: #F8F8FF;
+  font-size: 35px;
+  padding-top: 30px;
+  margin: 0px;
+  letter-spacing: 5px; /* отступ между буквами внутри элемента */
+}
+
+
+#blacksmall {
+  margin: 0px;
+  padding-top: 12px;
+  font-size: 12px;
+  letter-spacing: 2px;
+  font-weight: bold;
+  color: #262525;
+}
+
+.exp0 {
+  background: #F8F8FF;
+  margin-top: 30px;
+  padding-bottom: 5px;
+  float: left;
+  margin-left: 8%;
+  width: 200px;
+}
+
+#redsmall4 {
+  margin: 0px;
+  padding-top: 12px;
+  letter-spacing: 1.5px;
+  font-size: 12px;
+  font-weight: bold;
+  color: #e35252;
+}
+
+.exps {
+  background: #F8F8FF;
+  margin-left: 15px;
+  margin-top: 30px;
+  padding-bottom: 5px;
+  float: left;
+  width: 200px;
+}
+
+#redsmall5 {
+  margin: 0px;
+  padding-top: 12px;
+  letter-spacing: 1.5px;
+  font-size: 12px;
+  font-weight: bold;
+  color: #e35252;
+}
+
+#redsmall6 {
+  margin: 0px;
+  padding-top: 12px;
+  letter-spacing: 1.5px;
+  font-size: 12px;
+  font-weight: bold;
+  color: #e35252;
+}
+
+#redsmall7 {
+  margin: 0px;
+  padding-top: 12px;
+  letter-spacing: 1.5px;
+  font-size: 12px;
+  font-weight: bold;
+  color: #e35252;
+}
+
+.talented .wrapper img {
+  margin-top: 15px;
+}
+
+.talented .wrapper div {
+  border-radius: 10px; /* скруглённые уголки блоков */
+}
+
+.talented .wrapper p {
+  color: #77c775;
+  font-size: 20px;
+  margin-bottom: 1px;
+}
+
+.footer {
+  background: #262525;
+  min-height: 35px;
+  overflow: hidden;
+}
+
+.footer .wrapper {
+  margin-left: 750px;
+  float: left;
+  background: #262525;
+  height: 100%;
+  margin: 0 25% 0 25%;
+}
+
+.footer p {
+  margin: 0px;
+  margin-left: 20.5%;
+  margin-right: 32.5%;
+  padding-top: 10px;
+  font-size: 12px;
+  font-weight: bold;
+  font-family: arial;
+  letter-spacing: 1px;
+  float: left;
+  color: #fff;
+
+}
+
+.footer span {
+  color: #e35252;
+}
+
+.footer img {
+  clear: both;
+  overflow: hidden;
+  padding-top: 3px;
+  height: 100%;
+}
