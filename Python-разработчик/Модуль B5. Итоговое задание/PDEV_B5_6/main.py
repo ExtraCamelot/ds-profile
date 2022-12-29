@@ -73,12 +73,8 @@ while True:
 				or (line_field['C1'] == sym and line_field['C2'] == sym and line_field['C3'] == sym)\
 				or (line_field['A1'] == sym and line_field['B2'] == sym and line_field['C3'] == sym)\
 				or (line_field['C1'] == sym and line_field['B2'] == sym and line_field['A3'] == sym):
-			if player == 1:
-				print('Победа Игрока 1. Поздравляем!')
-				return True
-			else:
-				print('Победа Игрока 2. Поздравляем!')
-				return True
+			print(f'Победа Игрока {player}. Поздравляем!')
+			return True
 		else:
 				return False
 
