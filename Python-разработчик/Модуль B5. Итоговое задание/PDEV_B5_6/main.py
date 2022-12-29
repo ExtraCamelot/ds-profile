@@ -10,16 +10,19 @@ print('2', '-', 'X', '-')
 print('3', '-', '-', '-')
 print('\nПоехали!\n')
 
-
+line_field = {'A1':'-', 'A2':'-', 'A3':'-', 'B1':'-', 'B2':'-', 'B3':'-', 'C1':'-', 'C2':'-', 'C3':'-',}
 line_coordinates = ['0', 'A', 'B', 'C']
-line_one = ['1', '-', '-', '-']
-line_two = ['2', '-', '-', '-']
-line_tree = ['3', '-', '-', '-']
+line_one = []
+line_two = []
+line_tree = []
 
 motion_history = []
 
 while True:
 	def game_field():
+		line_one = ['1', line_field['A1'], line_field['B1'], line_field['C1']]
+		line_two = ['2', line_field['A2'], line_field['B2'], line_field['C2']]
+		line_tree = ['3', line_field['A3'], line_field['B3'], line_field['C3']]
 		print(*line_coordinates)
 		print(*line_one)
 		print(*line_two)
@@ -27,45 +30,9 @@ while True:
 
 	def choise_of_gamer (ch, player):
 		if player == 1:
-			if ch == 'A1':
-				line_one[1] = 'X'
-			elif ch == 'A2':
-				line_two[1] = 'X'
-			elif ch == 'A3':
-				line_tree[1] = 'X'
-			elif ch == 'B1':
-				line_one[2] = 'X'
-			elif ch == 'B2':
-				line_two[2] = 'X'
-			elif ch == 'B3':
-				line_tree[2] = 'X'
-			elif ch == 'C1':
-				line_one[3] = 'X'
-			elif ch == 'C2':
-				line_two[3] = 'X'
-			elif ch == 'C3':
-				line_tree[3] = 'X'
+			line_field[ch] = 'X'
 		else:
-			if ch == 'A1':
-				line_one[1] = '0'
-			elif ch == 'A2':
-				line_two[1] = '0'
-			elif ch == 'A3':
-				line_tree[1] = '0'
-			elif ch == 'B1':
-				line_one[2] = '0'
-			elif ch == 'B2':
-				line_two[2] = '0'
-			elif ch == 'B3':
-				line_tree[2] = '0'
-			elif ch == 'C1':
-				line_one[3] = '0'
-			elif ch == 'C2':
-				line_two[3] = '0'
-			elif ch == 'C3':
-				line_tree[3] = '0'
-
-
+			line_field[ch] = '0'
 
 	def choise_logic(gamer_choise, player):
 		if (gamer_choise in motion_history):
@@ -92,21 +59,24 @@ while True:
 			choise_logic(gamer_2, player)
 
 	def check_for_victory():
-		l_one, l_two, l_tree = ''.join(line_one), ''.join(line_two), ''.join(line_tree)
-		if l_one == '1XXX' or l_two == '2XXX' or l_tree == '3XXX' \
-				or (line_one[1] == 'X' and line_two[1] == 'X' and line_tree[1] == 'X')\
-				or (line_one[2] == 'X' and line_two[2] == 'X' and line_tree[2] == 'X')\
-				or (line_one[3] == 'X' and line_two[3] == 'X' and line_tree[3] == 'X')\
-				or (line_one[1] == 'X' and line_two[2] == 'X' and line_tree[3] == 'X')\
-				or (line_one[3] == 'X' and line_two[2] == 'X' and line_tree[1] == 'X'):
+		if (line_field['A1'] == 'X' and line_field['B1'] == 'X' and line_field['C1'] == 'X') \
+				or (line_field['A2'] == 'X' and line_field['B2'] == 'X' and line_field['C2'] == 'X') \
+				or (line_field['A3'] == 'X' and line_field['B3'] == 'X' and line_field['C3'] == 'X') \
+				or (line_field['A1'] == 'X' and line_field['A2'] == 'X' and line_field['A3'] == 'X')\
+				or (line_field['B1'] == 'X' and line_field['B2'] == 'X' and line_field['B3'] == 'X')\
+				or (line_field['C1'] == 'X' and line_field['C2'] == 'X' and line_field['C3'] == 'X')\
+				or (line_field['A1'] == 'X' and line_field['B2'] == 'X' and line_field['C3'] == 'X')\
+				or (line_field['C1'] == 'X' and line_field['B2'] == 'X' and line_field['A3'] == 'X'):
 			print('Победа Игрока 1. Поздравляем!')
 			return True
-		elif l_one == '1000' or l_two == '2000' or l_tree == '3000' \
-				or (line_one[1] == '0' and line_two[1] == '0' and line_tree[1] == '0')\
-				or (line_one[2] == '0' and line_two[2] == '0' and line_tree[2] == '0')\
-				or (line_one[3] == '0' and line_two[3] == '0' and line_tree[3] == '0')\
-				or (line_one[1] == '0' and line_two[2] == '0' and line_tree[3] == '0')\
-				or (line_one[3] == '0' and line_two[2] == '0' and line_tree[1] == '0'):
+		elif (line_field['A1'] == '0' and line_field['B1'] == '0' and line_field['C1'] == '0') \
+				or (line_field['A2'] == '0' and line_field['B2'] == '0' and line_field['C2'] == '0') \
+				or (line_field['A3'] == '0' and line_field['B3'] == '0' and line_field['C3'] == '0') \
+				or (line_field['A1'] == '0' and line_field['A2'] == '0' and line_field['A3'] == '0')\
+				or (line_field['B1'] == '0' and line_field['B2'] == '0' and line_field['B3'] == '0')\
+				or (line_field['C1'] == '0' and line_field['C2'] == '0' and line_field['C3'] == '0')\
+				or (line_field['A1'] == '0' and line_field['B2'] == '0' and line_field['C3'] == '0')\
+				or (line_field['C1'] == '0' and line_field['B2'] == '0' and line_field['A3'] == '0'):
 			print('Победа Игрока 2. Поздравляем!')
 			return True
 		elif len(motion_history) == 9:
