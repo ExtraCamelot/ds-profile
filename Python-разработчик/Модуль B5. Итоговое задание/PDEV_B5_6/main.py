@@ -58,26 +58,32 @@ while True:
 			gamer_2 = gamer_2.upper()
 			choise_logic(gamer_2, player)
 
-	def check_for_victory():
-		if (line_field['A1'] == 'X' and line_field['B1'] == 'X' and line_field['C1'] == 'X') \
-				or (line_field['A2'] == 'X' and line_field['B2'] == 'X' and line_field['C2'] == 'X') \
-				or (line_field['A3'] == 'X' and line_field['B3'] == 'X' and line_field['C3'] == 'X') \
-				or (line_field['A1'] == 'X' and line_field['A2'] == 'X' and line_field['A3'] == 'X')\
-				or (line_field['B1'] == 'X' and line_field['B2'] == 'X' and line_field['B3'] == 'X')\
-				or (line_field['C1'] == 'X' and line_field['C2'] == 'X' and line_field['C3'] == 'X')\
-				or (line_field['A1'] == 'X' and line_field['B2'] == 'X' and line_field['C3'] == 'X')\
-				or (line_field['C1'] == 'X' and line_field['B2'] == 'X' and line_field['A3'] == 'X'):
-			print('Победа Игрока 1. Поздравляем!')
-			return True
-		elif (line_field['A1'] == '0' and line_field['B1'] == '0' and line_field['C1'] == '0') \
-				or (line_field['A2'] == '0' and line_field['B2'] == '0' and line_field['C2'] == '0') \
-				or (line_field['A3'] == '0' and line_field['B3'] == '0' and line_field['C3'] == '0') \
-				or (line_field['A1'] == '0' and line_field['A2'] == '0' and line_field['A3'] == '0')\
-				or (line_field['B1'] == '0' and line_field['B2'] == '0' and line_field['B3'] == '0')\
-				or (line_field['C1'] == '0' and line_field['C2'] == '0' and line_field['C3'] == '0')\
-				or (line_field['A1'] == '0' and line_field['B2'] == '0' and line_field['C3'] == '0')\
-				or (line_field['C1'] == '0' and line_field['B2'] == '0' and line_field['A3'] == '0'):
-			print('Победа Игрока 2. Поздравляем!')
+	def check_combinations(player):
+		sym = 'X'
+		if player == 1:
+			sym = 'X'
+		else:
+			sym = '0'
+
+		if (line_field['A1'] == sym and line_field['B1'] == sym and line_field['C1'] == sym) \
+				or (line_field['A2'] == sym and line_field['B2'] == sym and line_field['C2'] == sym) \
+				or (line_field['A3'] == sym and line_field['B3'] == sym and line_field['C3'] == sym) \
+				or (line_field['A1'] == sym and line_field['A2'] == sym and line_field['A3'] == sym)\
+				or (line_field['B1'] == sym and line_field['B2'] == sym and line_field['B3'] == sym)\
+				or (line_field['C1'] == sym and line_field['C2'] == sym and line_field['C3'] == sym)\
+				or (line_field['A1'] == sym and line_field['B2'] == sym and line_field['C3'] == sym)\
+				or (line_field['C1'] == sym and line_field['B2'] == sym and line_field['A3'] == sym):
+			if player == 1:
+				print('Победа Игрока 1. Поздравляем!')
+				return True
+			else:
+				print('Победа Игрока 2. Поздравляем!')
+				return True
+		else:
+				return False
+
+	def check_for_victory(player):
+		if check_combinations(player):
 			return True
 		elif len(motion_history) == 9:
 			print('Ничья!')
@@ -89,11 +95,11 @@ while True:
 		game_field()
 	gamer_motion(1)
 	game_field()
-	if check_for_victory() == True:
+	if check_for_victory(1) == True:
 		input('Для выхода из приложения нажмите Enter:')
 		break
 	gamer_motion(2)
 	game_field()
-	if check_for_victory() == True:
+	if check_for_victory(2) == True:
 		input('Для выхода из приложения нажмите Enter:')
 		break
