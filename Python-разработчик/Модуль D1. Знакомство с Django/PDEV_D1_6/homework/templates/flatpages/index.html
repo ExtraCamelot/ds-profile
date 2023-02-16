@@ -1,0 +1,16 @@
+{% extends 'flatpages/default.html' %}
+{% block title %}
+    {{flatpage.title}}
+{% endblock title %}
+{% block body %}
+    <div>
+        <p class="task"><span class="main_word">Задание</span>: На одной из страниц контент повторяется 2 раза без изменения content (два раза прописано  flatpage.content ).</p>
+    </div>
+    <hr>
+    <div>
+        {{flatpage.content}}
+        <hr>
+        {{flatpage.content}}
+        <hr>
+    </div>
+{% endblock body %}

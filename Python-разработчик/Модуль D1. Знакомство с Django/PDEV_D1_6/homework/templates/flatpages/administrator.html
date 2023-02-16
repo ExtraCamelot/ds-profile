@@ -1,0 +1,14 @@
+{% extends 'flatpages/default.html' %}
+{% block title %}
+    {{flatpage.title}}
+{% endblock title %}
+{% block body %}
+    <div>
+        <p class="task"><span class="main_word">Задание</span>: Одна из страниц на сайте доступна только админу (только вошедшему пользователю).</p>
+    </div>
+    <hr>
+    <div>
+        {{flatpage.content}}
+        <hr>
+    </div>
+{% endblock body %}

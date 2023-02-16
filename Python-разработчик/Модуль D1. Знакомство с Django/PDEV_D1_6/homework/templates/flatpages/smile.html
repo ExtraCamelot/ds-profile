@@ -1,0 +1,16 @@
+{% extends 'flatpages/default.html' %}
+{% block title %}
+    {{flatpage.title}}
+{% endblock title %}
+{% block body %}
+    <div>
+        <p class="task"><span class="main_word">Задание</span>: На одной из страниц изменены шрифты и размеры текста.</p>
+    </div>
+    <hr>
+    <div>
+        <p class="lol">{{flatpage.content}}</p>
+        <hr>
+        <p class="attention">Скоро будет ещё <span class="color_word">анекдот</span></p>
+        <hr>
+    </div>
+{% endblock body %}
